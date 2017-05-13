@@ -47,7 +47,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title><?php echo ( $post->post_name != '' ) ? get_the_title() . " | " : ""; ?>Ignite by Humano</title>
+        <title><?php echo ( $post->post_name != '' ) ? get_the_title() . " | " : ""; ?>FEICOTUR</title>
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
