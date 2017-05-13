@@ -1,0 +1,210 @@
+/*
+Theme Name: Cliente
+Author: Humano Studio
+Author URI: http://humanostud.io
+Description: Tema desenvolvido exclusivamente para o Cliente.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: UX, UI, 
+Text Domain: cliente.com.br
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+
+
+
+/*INCLUA SUAS FONTES AQUI*/
+/* 
+@font-face {
+    font-family: 'dinprolight';
+    src: url(fonts/dinpro-light-webfont.eot);
+    src: url(fonts/dinpro-light-webfont.eot?#iefix) format('embedded-opentype'),
+         url(fonts/dinpro-light-webfont.woff) format('woff'),
+         url(fonts/dinpro-light-webfont.ttf) format('truetype'),
+         url(fonts/dinpro-light-webfont.svg#ralewaylight) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+
+
+
+
+/*----------------------CLASSES----------------------*/
+
+.ani-02,
+.hided,
+.appeared
+{
+    -webkit-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+    -moz-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+    -o-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+    -ms-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+    transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+}
+
+.ani-04
+{
+    -webkit-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -moz-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -o-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -ms-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+}
+
+.ani-06
+{
+    -webkit-transition: 0.6s all cubic-bezier(0.34, 0, 0, 1);
+    -moz-transition: 0.6s all cubic-bezier(0.34, 0, 0, 1);
+    -o-transition: 0.6s all cubic-bezier(0.34, 0, 0, 1);
+    -ms-transition: 0.6s all cubic-bezier(0.34, 0, 0, 1);
+    transition: 0.6s all cubic-bezier(0.34, 0, 0, 1);
+}
+
+
+
+.ani-delay-04
+{
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.ani-delay-06
+{
+    -webkit-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    -ms-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.ani-delay-08
+{
+    -webkit-transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+    -ms-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+
+
+
+
+.untouchable
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/*----------------------CLASSES----------------------*/
+
+
+
+
+
+
+/*----------------------MEDIAS----------------------*/
+
+@media (max-width: 479px) {
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*----------------------MEDIAS----------------------*/
+
+
+
+
+
+
+html,
+body
+{
+	height: 100%;
+	padding-top: 0;
+}
+
+body
+{
+	font-family: 'dinproregular', 'Arial Narrow', Arial, sans-serif;
+}
+
+*, *:before, *:after
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/*----------------------ANIMAÇÃO ON SCROLL----------------------*/
+
+
+.summon.hided
+{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+	-webkit-transform: scale(0.2,0.2);
+	-moz-transform: scale(0.2,0.2);
+	-ms-transform: scale(0.2,0.2);
+	-o-transform: scale(0.2,0.2);
+	transform: scale(0.2,0.2);
+}
+
+.summon.appeared
+{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+}
+
+
+/*----------------------ANIMAÇÃO ON SCROLL----------------------*/
+
+
+
+
+
+
+
+
+/*-------------------LINK 01-------------------*/
+/*-------------------LINK 02-------------------*/
+/*-------------------LINK 03-------------------*/
+/*-------------------LINK 04-------------------*/
+

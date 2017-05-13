@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Raul Vinicius> -- <Creative / Development> -- <@raul_vinicius>
+    <Raissa Costa> -- <Frontend> -- <>
+
+# THANKS
+
+    <>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, WordPress
+    jQuery, Modernizr
