@@ -183,6 +183,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 
+.regular
+{
+    font-family: 'lato-regular', Arial, sans-serif;
+}
+
 .bold
 {
     font-family: 'lato-bold', Arial, sans-serif;
@@ -231,7 +236,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border: 1px solid white;
     display: inline-block;
     position: relative;
-    margin: 100px;
 }
 
 .lk:hover, .lk:focus
@@ -351,6 +355,9 @@ a, a:hover, a:active, a:focus
     text-decoration: none;
 }
 
+
+
+
 /*----------------------ANIMAÇÃO ON SCROLL----------------------*/
 
 
@@ -388,12 +395,93 @@ a, a:hover, a:active, a:focus
 
 
 
+/*----------------------CAROUSEL----------------------*/
+
+.carrossel
+{
+    background-color: #3867c0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.carrossel ul
+{
+    padding: 0;
+}
+
+.carrossel ul li
+{
+    list-style: none;
+}
+
+.carrossel .edicoes .atual h2
+{
+    font-size: 26.47px;
+    margin: 0 0 30px 0;
+    letter-spacing: 0.43em;
+}
+
+.carrossel .edicoes .atual .logo-atual
+{
+    margin-bottom: 100px;
+}
+
+.carrossel .edicoes .atual p
+{
+    color: white;
+    font-size: 31.33px;
+    letter-spacing: 0.5em;
+    line-height: 55px;
+    margin: 0;
+} 
+
+.carrossel .edicoes .atual p span.linha-2
+{
+    font-size: 23.67px;
+    letter-spacing: 0.43em;
+    padding-right: 6px;
+}
+
+.carrossel .edicoes .atual p span.linha-3
+{
+    font-size: 37.14px;
+    letter-spacing: 0.5em;
+    padding-left: 8px;
+}
+
+.carrossel .edicoes .atual p span.linha-2,
+.carrossel .edicoes .atual p span.linha-3
+{
+    display: block;
+}
+
+.carrossel .edicoes .atual p img
+{
+    margin-top: 20px;
+}
+
+.carrossel .edicoes .atual ul
+{
+    padding: 0 40px 0 90px;
+    line-height: 35px;
+    margin-top: 70px;
+}
+
+.carrossel .edicoes .atual ul li
+{
+    display: inline-block;
+    font-size: 19px;
+    letter-spacing: 0.08em;
+    padding-right: 50px
+}
+
+.carrossel .edicoes .atual a
+{
+    margin-top: 100px;
+}
 
 
 
-
-/*-------------------LINK 01-------------------*/
-/*-------------------LINK 02-------------------*/
-/*-------------------LINK 03-------------------*/
-/*-------------------LINK 04-------------------*/
-
+/*----------------------CAROUSEL----------------------*/
