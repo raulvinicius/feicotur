@@ -406,6 +406,7 @@ a, a:hover, a:active, a:focus
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 .carrossel ul
 {
     padding: 0;
@@ -414,6 +415,12 @@ a, a:hover, a:active, a:focus
 .carrossel ul li
 {
     list-style: none;
+}
+
+.carrossel .edicoes .atual
+{
+    position: relative;
+    padding: 0;
 }
 
 .carrossel .edicoes .atual h2
@@ -462,19 +469,35 @@ a, a:hover, a:active, a:focus
     margin-top: 20px;
 }
 
-.carrossel .edicoes .atual ul
+.carrossel .edicoes .atual .atracoes
 {
-    padding: 0 40px 0 90px;
-    line-height: 35px;
+    padding: 0 40px 0 52px;
     margin-top: 70px;
 }
 
-.carrossel .edicoes .atual ul li
+.carrossel .edicoes .atual .atracoes li
 {
     display: inline-block;
+    margin-left: -12px;
+}
+
+.carrossel .edicoes .atual .atracoes li p
+{
     font-size: 19px;
     letter-spacing: 0.08em;
-    padding-right: 50px
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 35px;
+}
+
+.carrossel .edicoes .atual .atracoes li .divisor
+{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f9ec3b;
+    display: inline-block;
+    vertical-align: 11%;
 }
 
 .carrossel .edicoes .atual a
@@ -482,6 +505,26 @@ a, a:hover, a:active, a:focus
     margin-top: 100px;
 }
 
+.carrossel .edicoes .atual button
+{
+    width: 140px;
+    height: 140px;
+    background: url(img/feicotur-bt-left.png);
+    border: none;
+    outline: none;
+    position: absolute;
+    text-indent: -9000px;
+    top: 50%;
+    margin-top: -70px;
+    left: -140px;
+}
 
+.carrossel .edicoes .atual button.bt-right
+{
+    background: url(img/feicotur-bt-right.png);
+    right: -140px;
+    left: auto;
+}
 
+.carrossel .edicoes .atual button
 /*----------------------CAROUSEL----------------------*/
