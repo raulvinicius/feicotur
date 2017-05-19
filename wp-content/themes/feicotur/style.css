@@ -399,12 +399,9 @@ a, a:hover, a:active, a:focus
 
 .carrossel
 {
-    background-color: #3867c0;
     color: white;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
 
 .carrossel ul
@@ -421,6 +418,9 @@ a, a:hover, a:active, a:focus
 {
     position: relative;
     padding: 0;
+    background-color: #3867c0;  /*editar*/
+    padding-top: 60px;  /*editar*/
+    padding-bottom: 60px;  /*editar*/
 }
 
 .carrossel .edicoes .atual h2
@@ -432,7 +432,7 @@ a, a:hover, a:active, a:focus
 
 .carrossel .edicoes .atual .logo-atual
 {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .carrossel .edicoes .atual p
@@ -472,7 +472,7 @@ a, a:hover, a:active, a:focus
 .carrossel .edicoes .atual .atracoes
 {
     padding: 0 40px 0 52px;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 .carrossel .edicoes .atual .atracoes li
@@ -502,7 +502,7 @@ a, a:hover, a:active, a:focus
 
 .carrossel .edicoes .atual a
 {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .carrossel .edicoes .atual button
@@ -526,5 +526,38 @@ a, a:hover, a:active, a:focus
     left: auto;
 }
 
-.carrossel .edicoes .atual button
+.carrossel .edicoes .bt-edicao
+{
+    width: 16.66666666666667%;
+    text-align: left;
+    background-color: #023468;
+    border: none;
+    outline: none;
+    padding: 39px 12px 20px 12px;
+    line-height: 55px;
+    float: left;
+}
+
+.carrossel .edicoes .bt-edicao.ativo
+{
+    background-color: #002143;
+
+}
+
+.carrossel .edicoes .bt-edicao span
+{
+    width: 100%;
+    font-size: 55px;
+    font-family: 'lato-thin', Arial, sans-serif;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.carrossel .edicoes .bt-edicao.ativo span
+{
+    font-family: 'lato-regular', Arial, sans-serif;
+}
+
+
 /*----------------------CAROUSEL----------------------*/

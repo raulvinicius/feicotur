@@ -47,6 +47,17 @@
 				</div>
 			</li>
 
+			<div class="container-fluid bts-edicoes">
+				<div class="row">
+					<button class="bt-edicao ativo"><span>2017</span></button>
+					<button class="bt-edicao"><span>2016</span></button>
+					<button class="bt-edicao"><span>2015</span></button>
+					<button class="bt-edicao"><span>2014</span></button>
+					<button class="bt-edicao"><span>2013</span></button>
+					<button class="bt-edicao"><span>2012</span></button>
+				</div>
+			</div>
+
 		</ul>
 
 	</section>
