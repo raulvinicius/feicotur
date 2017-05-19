@@ -485,3 +485,127 @@ a, a:hover, a:active, a:focus
 
 
 /*----------------------CAROUSEL----------------------*/
+
+
+
+
+
+
+
+
+/*----------------------TESTE----------------------*/
+
+.feicotur-head
+{
+    background: url(img/feicotur-bg-head-top.jpg) no-repeat center bottom;
+    width: 100%;
+    text-align: center;
+    /*height: 530px;*/
+    position: relative;
+    z-index: 2;
+    margin-bottom: 220px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.feicotur-head:before
+{
+    background: url(img/feicotur-bg-head-left.png) no-repeat center top;
+    width: 530px;
+    height: 530px;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -190px;
+    left: 0;
+    z-index: 2;
+}
+
+.feicotur-head:after
+{
+    background: url(img/feicotur-bg-head-right.png) no-repeat center top;
+    width: 125px;
+    /*height: 260px;*/
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.feicotur-head #enfeite-centro
+{
+    display: block;
+    position: absolute;
+    background: url(img/feicotur-bg-head-enfeite-centro.png) no-repeat center top;
+    width: 823px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -411px;
+}
+
+{
+    background: url(img/feicotur-bg-head-top.jpg) no-repeat center bottom;
+    width: 100%;
+    text-align: center;
+    /*height: 530px;*/
+    position: relative;
+    /*overflow: hidden;*/
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.feicotur-head h3
+{
+    padding: 0;
+    margin: 0;
+}
+
+.feicotur-head .recorte
+{
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.enfeite-corpo-01,
+.enfeite-corpo-02
+{
+    background: url(img/feicotur-enfeite-corpo-01.png) no-repeat left top;
+    position: absolute;
+    left: -517px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    display: block;
+}
+
+.enfeite-corpo-02
+{
+    background: url(img/feicotur-enfeite-corpo-02.png) no-repeat left top;
+    left: -100px;
+    top: 170px;
+}
+
+/*----------------------TESTE----------------------*/
+
+
+
+
+.feicotur-head #pattern
+{
+    position: absolute;
+    z-index: -100;
+}
+
+.myClass {
+  fill: url(#image);
+  fill-
+}
+
+
