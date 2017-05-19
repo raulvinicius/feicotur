@@ -17,7 +17,7 @@
                 </g>
             </svg>
 
-            <p>TESTE</p>
+            
 
         </footer>
 

@@ -419,6 +419,7 @@ a, a:hover, a:active, a:focus
     position: relative;
     padding: 0;
     background-color: #3867c0;  /*editar*/
+    background: url(img/feicotur-bg-edicao-atual.jpg) no-repeat top center;
     padding-top: 60px;  /*editar*/
     padding-bottom: 60px;  /*editar*/
 }
