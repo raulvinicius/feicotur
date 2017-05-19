@@ -611,6 +611,12 @@ a, a:hover, a:active, a:focus
     right: 0;
 }
 
+.feicotur-head #pattern
+{
+    position: absolute;
+    z-index: -100;
+}
+
 .feicotur-head #enfeite-centro
 {
     display: block;
@@ -673,15 +679,54 @@ a, a:hover, a:active, a:focus
 
 
 
-.feicotur-head #pattern
+
+
+
+
+/*----------------------FOOTER----------------------*/
+
+footer
 {
-    position: absolute;
-    z-index: -100;
+    background: url(img/feicotur-bg-footer-bot.jpg) no-repeat top right;
+    margin-top: 60px;
+    padding-top: 42px;
+    padding-bottom: 170px;
+    position: relative;
+    z-index: 0;
 }
 
-.myClass {
-  fill: url(#image);
-  fill-
+footer:before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(img/feicotur-bg-footer-left.png) no-repeat top left;
+    z-index: -1;
 }
+
+footer:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -31px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(img/feicotur-bg-footer-right.png) no-repeat top right;
+    z-index: -1;
+}
+
+footer .recorte
+{
+    margin-top: -73px;
+}
+
+/*----------------------FOOTER----------------------*/
+
 
 

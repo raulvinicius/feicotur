@@ -15,12 +15,12 @@
 			 x="0px" y="0px" width="100%" height="190" viewBox="0 0 100% 100%" style="enable-background:new 0 0 1921 100%;"
 			 xml:space="preserve">
 			 <defs>
-			   <pattern id='image' width="1" height="1" viewBox="0 0 100% 100%" preserveAspectRatio="none">
+			   <pattern id='image-head' width="1" height="1" viewBox="0 0 100% 100%" preserveAspectRatio="none">
 			     <image xlink:href='<?php bloginfo('template_url') ?>/img/feicotur-bg-head-bot.jpg' x="0" y="0" width="100%" height="531" preserveAspectRatio="xMidYMin slice"></image>
 			   </pattern>
 			 </defs>
 			<g>
-				<path class="myClass" d="M189,0L0,189V0H190z"/>
+				<path fill="url(#image-head)" d="M189,0L0,189V0H190z"/>
 				</g>
 		</svg>
 

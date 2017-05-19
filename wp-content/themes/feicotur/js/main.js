@@ -10,7 +10,11 @@ $(document).ready(function() {
 
 	$( window ).resize(function(e) 
 	{
-		//do something
+		//redesenha o recorte do rodapé
+		wBody = $('body').width();
+		wRecorte = 504;
+		wNovo = wBody - wRecorte;
+		$('footer .recorte path').attr('d', 'M1920,0v41H0V31h'+ wNovo +'l31-31H'+ wNovo +'z')
 	});
 	$( window ).trigger('resize');
 
