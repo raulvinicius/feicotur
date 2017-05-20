@@ -5,7 +5,6 @@
 <section class="home">
 
 	<section class="carrossel">
-
 		<ul class="edicoes">
 				
 			<li class="atual container-fluid">
@@ -47,6 +46,30 @@
 				</div>
 			</li>
 
+			<li class="anterior container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-8">
+							
+							<img class="logo-anterior" src="<?php bloginfo("template_url") ?>/img/feicotur-2016.png">
+
+							<p>
+								<span>Veja o que aconteceu na quinta edição da feira</span>
+
+								<img src="<?php bloginfo("template_url") ?>/img/feicotur-seta-baixo-carousel.png">
+							</p>
+
+							<a href="#" class="lk">Ver fotos</a>
+							<a href="#" class="lk">Ver vídeos</a>
+
+							<button class="bt-left">Anterior</button>
+							<button class="bt-right">Próximo</button>
+							
+						</div>
+					</div>
+				</div>
+			</li>
+
 			<div class="container-fluid bts-edicoes">
 				<div class="row">
 					<button class="bt-edicao ativo"><span>2017</span></button>
@@ -59,8 +82,9 @@
 			</div>
 
 		</ul>
-
 	</section>
+
+	section
 
 </section>
 

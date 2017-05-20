@@ -136,5 +136,18 @@
 
         <![endif]-->
 
+        <header>
+            <nav class="menu">
+                <a href="#"><h1 class="logo">FEICOTUR</h1></a>
+                <ul>
+                    <li><a href="#">A Feira</a></li>
+                    <li><a href="#">Institucional</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
 
         
