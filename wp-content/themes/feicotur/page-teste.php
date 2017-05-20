@@ -21,7 +21,7 @@
 			 </defs>
 			<g>
 				<path fill="url(#image-head)" d="M189,0L0,189V0H190z"/>
-				</g>
+			</g>
 		</svg>
 
 		<span id="enfeite-centro"></span>
@@ -37,6 +37,7 @@
 		<span class="enfeite-corpo-01"></span>
 		<span class="enfeite-corpo-02"></span>
 
+		<img src="<?php bloginfo('template_url') ?>/img/feicotur-icon-qualidade.svg" width="147" height="147">
 
 	<section class="quem-somos">
 

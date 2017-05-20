@@ -14,7 +14,11 @@ $(document).ready(function() {
 		wBody = $('body').width();
 		wRecorte = 504;
 		wNovo = wBody - wRecorte;
-		$('footer .recorte path').attr('d', 'M1920,0v41H0V31h'+ wNovo +'l31-31H'+ wNovo +'z')
+		if(wNovo <= 0)
+		{
+			wNovo = 0;
+		}
+		$('footer .recorte path').attr('d', 'M1920,0v41H0V31h'+ wNovo +'l31-31H'+ wNovo +'z');
 	});
 	$( window ).trigger('resize');
 

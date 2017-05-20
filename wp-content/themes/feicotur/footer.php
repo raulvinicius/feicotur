@@ -12,9 +12,7 @@
                       <image xlink:href='<?php bloginfo('template_url') ?>/img/feicotur-bg-footer-top.jpg' x="0" y="0" width="100%" height="31" preserveAspectRatio="xMaxYMax slice"></image>
                     </pattern>
                 </defs>
-                <g>
-                    <path fill="url(#image-recorte-footer)" d="M1920,0v41H0V31h1415l31-31H1920z"/>
-                </g>
+                <path fill="url(#image-recorte-footer)" d="M1920,0v41H0V31h1415l31-31H1920z"/>
             </svg>
 
             
