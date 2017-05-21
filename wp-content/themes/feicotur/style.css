@@ -496,6 +496,66 @@ a, a:hover, a:active, a:focus
 
 
 
+
+/*----------------------HEADER----------------------*/
+.menu
+{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    background: url(img/feicotur-bg-logo.jpg) center no-repeat white;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    height: 100px;
+}
+
+.menu .logo
+{
+    width: 180px;
+    height: 60px;
+    text-indent: -9999px;
+    background: url(img/feicotur-logo.png) center no-repeat;
+    display: inline-block;
+    margin: 17px 0 0 0;
+}
+
+.menu ul
+{
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+    font-family: 'lato-medium', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: -40px;
+    padding-right: 35px;
+}
+
+.menu ul li
+{
+    display: inline-block;
+    padding: 0 2.5px;
+}
+
+.menu ul li a
+{
+    color: #666666;
+    padding: 10px 7.5px;
+}
+
+/*----------------------HEADER----------------------*/
+
+
+
+
+
+
+
+
+
+
 /*----------------------CAROUSEL----------------------*/
 
 .carrossel
@@ -503,6 +563,11 @@ a, a:hover, a:active, a:focus
     color: white;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+    height: 100%;
+    z-index: 1001;
+    background: #1154af;
+    margin-top: -100px;
 }
 
 .carrossel ul
@@ -515,10 +580,26 @@ a, a:hover, a:active, a:focus
     list-style: none;
 }
 
+.carrossel .li-edicao
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.carrossel ul .bts-edicoes
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .carrossel .edicoes .atual
 {
     padding: 0;
-    background-color: #3867c0;  /*editar*/
     background: url(img/feicotur-bg-edicao-atual.jpg) no-repeat top center;
     padding-top: 60px;  /*editar*/
     padding-bottom: 60px;  /*editar*/
@@ -675,7 +756,7 @@ a, a:hover, a:active, a:focus
     background-color: #023468;
     border: none;
     outline: none;
-    padding: 39px 12px 20px 12px;
+    padding: 29px 12px 20px 12px;
     line-height: 55px;
     float: left;
 }
@@ -707,52 +788,43 @@ a, a:hover, a:active, a:focus
 
 
 
+/*----------------------HOME----------------------*/
 
-/*----------------------HEADER----------------------*/
-.menu
+.home
 {
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    background: url(img/feicotur-bg-logo.jpg) center no-repeat;
+    height: 100%;
+}
+
+.home .a-feira
+{
+    padding-top: 200px;
+}
+
+.home .a-feira p
+{
+    color: white;
+    margin-bottom: 50px;
+}
+
+.home .quem-somos
+{
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.home .quem-somos ul li
+{
+    margin-bottom: 150px;
+    position: relative;
     text-align: center;
 }
 
-.menu .logo
+.home .quem-somos #wrap-link
 {
-    width: 180px;
-    height: 60px;
-    text-indent: -9999px;
-    background: url(img/feicotur-logo.png) center no-repeat;
-    display: inline-block;
-    margin: 17px 0 0 0;
+    text-align: center;
 }
 
-.menu ul
-{
-    width: 100%;
-    text-align: right;
-    font-size: 14px;
-    font-family: 'lato-medium', Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-top: -40px;
-    padding-right: 35px;
-}
-
-.menu ul li
-{
-    display: inline-block;
-    padding: 0 2.5px;
-}
-
-.menu ul li a
-{
-    color: #666666;
-    padding: 10px 7.5px;
-}
-
-/*----------------------HEADER----------------------*/
+/*----------------------HOME----------------------*/
 
 
 
@@ -818,19 +890,22 @@ footer .recorte
     padding-bottom: 150px;
 }
 
+.home .quem-somos #wrap-tit,
 .institucional #wrap-tit
 {
     text-align: right;
 }
 
-.institucional h1
+.home .quem-somos #wrap-tit h1,
+.institucional #wrap-tit h1
 {
     display: block;
     font-size: 91px;
     margin-top: 0;
 }
 
-.institucional h1 span
+.home .quem-somos #wrap-tit h1 span,
+.institucional #wrap-tit h1 span
 {
     display: block;
     font-size: 75px;

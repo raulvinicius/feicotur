@@ -1,11 +1,18 @@
 $(document).ready(function() {
 
 
-	$( window ).scroll(function() 
-	{
+	$( window ).scroll(function(e) 
+	{ 
 		setTimeout(showInAnimation,400);
+
+		scrollHome();
+
+		lastScroll = $(window).scrollTop();
+
+
 	});
-	$( window ).trigger('scroll');
+	setTimeout(showInAnimation,400);
+	// $( window ).trigger('scroll');
 
 
 	$( window ).resize(function(e) 
@@ -130,7 +137,17 @@ $(document).ready(function() {
 		$(this).closest('.alert').hide();
 	})
 
+
 }); //end $(document).ready
+
+
+var wasScrolled = false;
+var wBody = 0;
+var wRecorte = 0;
+var wNovo = 0;
+
+
+
 
 function contatoOk (data)
 {
@@ -218,4 +235,27 @@ function showInAnimation ()
 			$(this).addClass('appeared').removeClass('hided');
 		}
 	})
+}
+
+function scrollHome ()
+{
+	if( !wasScrolled && $(window).scrollTop() < 30 )
+	{
+		$('html, body').animate({
+			scrollTop:document.getElementById('inicio').getBoundingClientRect().top+5
+		}, 500)
+	}
+	wasScrolled = true;
+}
+
+function finalScrollHome()
+{
+	$('.home .carrossel').css({
+		position: 'fixed',
+		top: '-100%'
+	});
+	$('.home .a-feira').css({
+		'padding-top': '100px'
+	});
+	$(window).scrollTop(0)
 }

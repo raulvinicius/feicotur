@@ -138,7 +138,7 @@
 
         <header>
             <nav class="menu">
-                <a href="#"><h1 class="logo">FEICOTUR</h1></a>
+                <a href="<?php bloginfo('url') ?>"><h1 class="logo">FEICOTUR</h1></a>
                 <ul>
                     <li><a href="#">A Feira</a></li>
                     <li><a href="#">Institucional</a></li>

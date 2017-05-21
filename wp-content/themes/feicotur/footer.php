@@ -1,5 +1,4 @@
 
-<!-- 
         <footer>
 
             <svg class="recorte" version="1.1"
@@ -14,9 +13,7 @@
                 <path fill="url(#image-recorte-footer)" d="M1920,0v41H0V31h1415l31-31H1920z"/>
             </svg>
 
-            
-
-        </footer> -->
+        </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src= "<?php bloginfo("template_url") ?>/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
