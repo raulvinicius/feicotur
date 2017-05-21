@@ -873,6 +873,69 @@ footer .recorte
     margin-top: -73px;
 }
 
+
+
+footer h2
+{
+    font-size: 16.52px;
+    color: white;
+    font-family: 'lato-regular', Arial, sans-serif;
+    text-transform: none;
+    letter-spacing: 0.1em;
+    margin: 0 0 10px 0;
+}
+
+footer p
+{
+    text-indent: -9999px;
+}
+
+footer ul
+{
+    padding: 0;
+}
+
+footer .parceiros li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 38px;
+}
+
+
+footer .parceiros .parceiro-01
+{
+    background: url(img/feicotur-logo-humano-studio.png) no-repeat center;
+    width: 129px;
+    height: 34px;
+}
+
+
+footer .realizacao,
+footer .coordenacao
+{
+    display: inline-block;
+}
+
+footer .realizacao
+{
+    margin-right: 65px;
+}
+
+footer .realizacao p
+{
+    background: url(img/feicotur-logo-branca.png) no-repeat center;
+    width: 124px;
+    height: 32px;
+}
+
+footer .coordenacao p
+{
+    background: url(img/feicotur-logo-merito-comunicacao.png) no-repeat center;
+    width: 105px;
+    height: 36px;
+}
+
 /*----------------------FOOTER----------------------*/
 
 

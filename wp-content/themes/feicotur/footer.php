@@ -1,6 +1,32 @@
 
         <footer>
 
+
+            <div class="col-sm-offset-1 col-sm-8">
+                <ul class="parceiros">
+                    <h2>Parceiros:</h2>
+
+                    <li><p class="parceiro-01">Humano Studio</p></li>
+                </ul>
+            </div>
+            
+            <div class="col-sm-3">
+
+                <div class="realizacao">
+                    <h2>Realização:</h2>
+
+                    <p>FEICOTUR</p>
+                </div>
+
+                <div class="coordenacao">
+                    <h2>Coordenação:</h2>
+                    
+                    <p>Mérito Comunicação</p>
+                </div>
+                    
+            </div>
+
+            <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
             <svg class="recorte" version="1.1"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
                  x="0px" y="0px" width="100%" height="31px" viewBox="0 0 100% 31" style="enable-background:new 0 0 505 31;"
@@ -10,7 +36,9 @@
                       <image xlink:href='<?php bloginfo('template_url') ?>/img/feicotur-bg-footer-top.jpg' x="0" y="0" width="100%" height="31" preserveAspectRatio="xMaxYMax slice"></image>
                     </pattern>
                 </defs>
-                <path fill="url(#image-recorte-footer)" d="M1920,0v41H0V31h1415l31-31H1920z"/>
+                <g>
+                    <path fill="url(#image-recorte-footer)" d="M1920,0v41H0V31h1415l31-31H1920z"/>
+                </g>
             </svg>
 
         </footer>
