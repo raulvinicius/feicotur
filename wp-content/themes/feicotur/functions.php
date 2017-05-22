@@ -10,25 +10,24 @@
 
 // CUSTOM POST
 
-/*function codex_custom_init() {
-	$labelsAcomodacoes = array(
-		'name' => _x('Acomodações', 'nome plural do tipo de post'),
-		'singular_name' => _x('Acomodação', 'nome singular do tipo de post'),
-		'add_new' => _x('Adicionar Acomodação', 'acomodacoes'),
-		'add_new_item' => __('Adicionar Acomodação'),
-		'edit_item' => __('Editar Acomodação'),
-		'new_item' => __('Nova Acomodação'),
-		'all_items' => __('Todas as Acomodações'),
-		'view_item' => __('Ver Acomodação'),
-		'search_items' => __('Procurar por Acomodação'),
-		'not_found' =>  __('Nenhuma Acomodação foi encontrada'),
-		'not_found_in_trash' => __('Não há Acomodações na lixeira'), 
+function codex_custom_init() {
+	$labelsFotos = array(
+		'name' => _x('Fotos', 'nome plural do tipo de post'),
+		'singular_name' => _x('Foto', 'nome singular do tipo de post'),
+		'add_new' => _x('Adicionar Foto', 'fotos'),
+		'add_new_item' => __('Adicionar Foto'),
+		'edit_item' => __('Editar Foto'),
+		'new_item' => __('Nova Foto'),
+		'all_items' => __('Todas as Fotos'),
+		'view_item' => __('Ver Foto'),
+		'search_items' => __('Procurar por Foto'),
+		'not_found' =>  __('Nenhuma Foto foi encontradas'),
+		'not_found_in_trash' => __('Não há Fotos na lixeira'),
 		'parent_item_colon' => '',
-		'menu_name' => 'Acomodações'
-
+		'menu_name' => 'Fotos'
 	);
-	$argsAcomodacoes = array(
-		'labels' => $labelsAcomodacoes,
+	$argsFotos = array(
+		'labels' => $labelsFotos,
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true, 
@@ -40,58 +39,69 @@
 		'hierarchical' => false,
 		'menu_position' => 5,
 		'menu_icon' => 'dashicons-screenoptions',
-	    //'taxonomies' => array('nome-da-taxonomy') //DESCOMENTAR CASO TENHA CRIADO UMA TAXONOMY PARA ESSE "POST TYPE"
-		'supports' => array( 'title' )
+		'supports' => array( 'title' ),	
+		'taxonomies' => array('tag-edicoes')
 	); 
-	register_post_type('acomodacoes',$argsAcomodacoes);
+	register_post_type('fotos',$argsFotos);
+
+
 
 
 }
 add_action( 'init', 'codex_custom_init' );
-*/
 
 
 
-/*
-//ADD CUSTOM TAXONOMY
+
+
+add_action('init', 'add_homenageado_url');
+function add_homenageado_url()
+{
+    add_rewrite_rule(
+        'fotos/([0-9]+)/?$',
+        'index.php?pagename=fotos&category_name=$matches[1]',
+        'top'
+    );
+
+    // flush_rewrite_rules();
+}
+
+
+
+
+
+
 add_action( 'init', 'build_taxonomies', 0 );
  
 function build_taxonomies() 
 {
 
-	// PARA VÁRIAS TAXONOMIES, DUPLIQUE ESSE BLOCO
 	register_taxonomy(
-	    'nome-da-taxomomy',
-	    'object-type', //NOME(S) TO "POST TYPE(S)" LIGADO(S) À ESSA TAXONOMY. 
+	    'tag-edicoes',
+	    array('fotos'),
 	    array(
-	        'hierarchical' => true, //TRUE = CATEGORIA | FALSE = TAG
-	        'label' => 'Label da Taxonomia',
+	        'hierarchical' => false,
+	        'label' => 'Edições',
 	        'query_var' => true,
 	        'rewrite' => false
 	    )
 	);
 
-
 }
-*/
+
 
 
 
 
 // CUSTOM IMAGE SIZE
-/*
+
 if ( function_exists( 'add_image_size' ) ) 
 {
-	add_image_size( 'foto-destaque', 360, 300, true );
-	add_image_size( 'zoom-destaque', 240, 300, true );
-	add_image_size( 'tb-lista', 220, 215, true );
-	add_image_size( 'tb-foto', 102, 100, true );
-	add_image_size( 'foto', 470, 460, true );
+	add_image_size( 'foto-galeria', 315, 205, true );
 }
-*/
 
 
-function get_post_by_type($type, $meta_key = NULL, $order = 'DESC', $per_page = -1, $paged = NULL)
+function get_post_by_type($type, $extra_args = NULL, $order = 'DESC', $per_page = -1, $paged = NULL)
 {
 	$args = array();
 	if (!isset( $paged ) )
@@ -99,18 +109,16 @@ function get_post_by_type($type, $meta_key = NULL, $order = 'DESC', $per_page = 
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	}
 
-	if (isset( $meta_key ) )
+	$args = array();
+	if (isset( $extra_args ) )
 	{
-		$args['meta_key'] = $meta_key;
-		$args['orderby'] = 'meta_value_num';
+		$args = $extra_args;
 	}
 
-	$args = array(
-		'post_type'			=>		$type,
-		'posts_per_page' 	=>		$per_page,
-		'paged'			 	=>		$paged,
-		'order'				=>		$order
-	);
+	$args['post_type']			=	$type;
+	$args['posts_per_page'] 	=	$per_page;
+	$args['paged']			 	=	$paged;
+	$args['order']				=	$order;
 
 	return new WP_Query( $args );
 }
@@ -218,3 +226,22 @@ function get_completaUrl ($urlAdicional = "")
 		return get_bloginfo('url') . $urlAdicional;
 	}
 }
+
+// ORDENA ARRAYS MULTIDIMENSIONAIS
+function array_orderby()
+{
+    $args = func_get_args();
+    $data = array_shift($args);
+    foreach ($args as $n => $field) {
+        if (is_string($field)) {
+            $tmp = array();
+            foreach ($data as $key => $row)
+                $tmp[$key] = $row[$field];
+            $args[$n] = $tmp;
+            }
+    }
+    $args[] = &$data;
+    call_user_func_array('array_multisort', $args);
+    return array_pop($args);
+}
+

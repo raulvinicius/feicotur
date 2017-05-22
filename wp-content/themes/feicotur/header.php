@@ -143,20 +143,49 @@
             <nav class="menu fechado">
                 <a href="<?php bloginfo('url') ?>"><h1 class="logo">FEICOTUR</h1></a>
                 <ul id="main-links" class="ani-04">
-                    <li><a class="ani-04" href="#">A Feira</a>
+                    <li><a class="ani-04" href="<?php bloginfo('url') ?>/a-feira">A Feira</a>
                     </li><li>
-                        <a class="ani-04" href="#">Institucional</a>
+                        <a class="ani-04" href="<?php bloginfo('url') ?>/institucional">Institucional</a>
                     </li><li class="submenu">
                         <a class="ani-04">Fotos</a>
                         <ul class="ani-02">
 
-                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2017">2017</a></li>
-                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2016">2016</a></li>
-                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2015">2015</a></li>
+                            <?php 
+
+                                $arEdicoesFotos = array();
+
+                                $fotos = get_post_by_type('fotos', NULL, 'ASC', -1);
+
+                                while ( $fotos->have_posts() ) :
+                                    $fotos->the_post();
+                                    $edicao = get_field('edicao');
+
+                                    $arEdicoesFotos[] = array(
+                                        'id' => $edicao,
+                                        'name' => get_term_by('id', $edicao, 'tag-edicoes')->name
+                                    );
+
+                                endwhile;
+
+                                wp_reset_query();
+                                $arEdicoesFotos = array_map('unserialize', array_unique(array_map('serialize', $arEdicoesFotos)));
+                                $arEdicoesFotos = array_orderby($arEdicoesFotos, 'name', SORT_DESC);
+
+
+                                if (count($arEdicoesFotos) > 0):
+                                    for ($i=0; $i<count($arEdicoesFotos); $i++):
+                                    ?>
+
+                                        <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/<?php echo $arEdicoesFotos[$i]['name'] ?>"><?php echo $arEdicoesFotos[$i]['name'] ?></a></li>
+
+                                    <?php 
+                                    endfor;
+                                endif; 
+                            ?>
 
                         </ul>
                     </li><li>
-                        <a class="ani-04" href="#">Contato</a></li>
+                        <a id="contato" class="ani-04" href="javascript:void(0);">Contato</a></li>
                 </ul>
                 <span class="bt-toggle"></span>
             </nav>

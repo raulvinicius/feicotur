@@ -6,7 +6,12 @@
 
 	<section class="feicotur-head container-fluid">
 
-		<h2>A Feira</h2>
+		<div class="row">
+			<div class="container">
+				<h2 class="col-md-8 col-md-offset-2">A Feira</h2>
+				<p class="col-md-8 col-md-offset-2 color-w">A FEICOTUR tem o propósito de reunir expositores da Industria, Comércio e Turismo a nível local e Regional durante três dias com a finalidade de aproximar empresários, consumidores e a população em geral</p>
+			</div>
+		</div>
 
 		<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
 		<svg class="recorte" version="1.1"

@@ -107,6 +107,142 @@ $(document).ready(function() {
 
 
 
+	//-----------------FOTOS-----------------//
+
+	//preenche a Array "fotos" com as URLs presentes na lista de fotos
+	$('.fotos li').each(function(index, el) {
+		fotos.push($(this).find('a').attr('data-img'));
+	});
+
+	$('.fotos li a').on('click', function() 
+	{
+		event.preventDefault();
+		zoomFoto( $(this).attr('data-i') );
+	});	
+
+	$('.fotos .foto-full #close').on('click', function() 
+	{
+		fechaZoomFoto();
+	});	
+
+	$('.fotos .foto-full #left').bind('click', function (e)
+	{
+		var iFoto = $(this).closest('.foto-full').find('img').attr('data-i');
+
+		if ( iFoto == 0 )
+		{
+			iFoto = fotos.length-1;
+		}
+		else
+		{
+			iFoto--;
+		}
+
+		zoomFoto( iFoto );
+
+	})
+
+	$('.fotos .foto-full #right').bind('click', function (e)
+	{
+		var iFoto = $(this).closest('.foto-full').find('img').attr('data-i');
+
+		if ( iFoto == fotos.length - 1 )
+		{
+			iFoto = 0;
+		}
+		else
+		{
+			iFoto++;
+		}
+
+		zoomFoto( iFoto );
+
+	})
+
+
+	//-----------------FOTOS-----------------//
+
+
+
+
+
+
+
+
+	//-----------------CONTATO-----------------//
+
+	$('.menu #contato').on('click', function(event) {
+		event.preventDefault();
+		$('.contato')
+			.css({
+				display: 'block',
+				overflow: 'auto',
+			});
+		$('body')
+			.css({
+				overflow: 'hidden',
+			});
+	});
+
+	$('.contato #fecha').on('click', function(event) {
+		event.preventDefault();
+		$('.contato')
+			.css({
+				display: 'none',
+				overflow: 'hidden',
+			});
+		$('body')
+			.css({
+				overflow: 'auto',
+			});
+	});
+
+	$('form #notificacoes #fecha-notificacao').on('click', function() 
+	{
+		console.log($(this))
+		$(this).closest('#notificacoes').find('#processando')
+			.css('margin-left', '100%');
+		$(this).closest('#notificacoes').find('#sucesso')
+			.css('margin-left', '100%');
+		$(this).closest('#notificacoes').find('#erro')
+			.css('margin-left', '100%');
+		$(this).closest('#notificacoes').css('pointer-events', 'none');
+		$(this).closest('form').find('input[type="submit"]')
+			.removeAttr('disabled')
+			.removeClass('disabled');
+	});
+
+	$('.contato form #assunto label').on('click', function(){
+		$('.contato form #assunto input').removeAttr('checked');
+		$('.contato form #assunto label').attr({
+			id: ''
+		});
+		$(this).attr('id', 'checked');
+		$('.contato form #assunto label[for="' + $(this).attr('for') + '"]').attr('checked', 'checked')
+	})
+
+	$('.auto-resize').on('keydown', function ()
+	{
+		if( $(this)[0].scrollHeight < 300 )
+		{
+			$(this).css('height', $(this)[0].scrollHeight + 'px');
+		}
+	})
+
+	$('.auto-resize').on('keyup', function ()
+	{
+		$(this).trigger('keydown')
+	})
+
+	//-----------------CONTATO-----------------//
+
+
+
+
+
+
+
+
 	$( 'body' ).on( 'click', 'button.dead', function(){ return false; } );
 	
 	if( $( '#map-canvas' ).length > 0 )
@@ -143,15 +279,15 @@ $(document).ready(function() {
 			$(this).closest('form').validate({
 				submitHandler: function(form)
 				{
+					$(form).find('#notificacoes')
+						.css('pointer-events', 'auto');
 
-					$(form).find('#success').hide();
-					$(form).find('#error').hide();
-					$(form).find('.form-text').hide();
-					$(form).find('fieldset').hide();
-					$(form).find('.form-text').hide();
-					$(form).find('input[type=submit]').hide();
+					$(form).find('#notificacoes #processando')
+						.css('margin-left', '0');
 
-					$(form).find('#process').show();
+					$(form).find('input[type=submit]')
+						.addClass('disabled')
+						.attr('disabled', 'disabled');
 
 					$(form).ajaxSubmit({
 						type: 'post',
@@ -173,13 +309,13 @@ $(document).ready(function() {
 				},
 				messages: {
 					nm: {
-						required: 'Campo obrigatório'
+						required: 'Informe seu nome'
 					},
 					ml: {
-						email: 'E-mail inválido',
-						required: 'Campo obrigatório'
+						email: 'Este e-mail parece estar incorreto',
+						required: 'Precisamos saber seu e-mail'
 					},
-					msgm: {
+					mnsg: {
 						required: 'Deixe sua mensagem'
 					}
 				}
@@ -187,10 +323,19 @@ $(document).ready(function() {
 		}
 	)
 
+
+
+
+
+
+
 	$('.alert button').bind('click', function()
 	{
 		$(this).closest('.alert').hide();
 	})
+
+
+
 
 
 }); //end $(document).ready
@@ -339,3 +484,24 @@ function finalScrollHome()
 	});
 	$(window).scrollTop(0)
 }
+
+
+var fotos = [];
+function zoomFoto (index)
+{
+	console.log(index);
+	$('.fotos .foto-full')
+		.css('display', 'block')
+		.find('img')
+		.attr('src', fotos[index])
+		.attr('data-i', index);
+}
+
+function fechaZoomFoto () 
+{
+	$('.fotos .foto-full')
+		.css('display', 'none')
+		.find('img')
+		.attr('src', '');
+}
+

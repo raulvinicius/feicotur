@@ -2,8 +2,13 @@
 
             <div class="container">
                 <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <button id="fecha"></button>
+                    </div>
+                </div>
+                <div class="row">
                     
-                    <form class="js col-lg-6 col-lg-offset-3" action="<?php bloginfo('url')?>/envia-email" method="POST" role="form">
+                    <form class="js col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" action="<?php bloginfo('url')?>/envia-email" method="POST" role="form">
 
                         <div class="title">
                             <legend class="color-b">Deixe sua mensagem</legend>
@@ -49,7 +54,7 @@
 
                                 <span>Enviando seu e-mail...</span>
                                 <div>
-                                    <img src="<?php bloginfo('template_url') ?>/img/premiomerito-loading.gif">
+                                    <img src="<?php bloginfo('template_url') ?>/img/feicotur-loading.gif" width="50">
                                 </div>
                                 
                             </div>

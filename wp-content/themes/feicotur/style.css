@@ -309,8 +309,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     position: relative;
     z-index: 2;
     margin-bottom: 220px;
-    padding-bottom: 50px;
-    padding-top: 70px;
+    padding-bottom: 80px;
+    padding-top: 40px;
 }
 
 .feicotur-head:before
@@ -345,6 +345,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 {
     position: relative;
     z-index: 6;
+}
+
+.feicotur-head p
+{
+    margin-top: 40px;
 }
 
 .feicotur-head #pattern
@@ -487,6 +492,69 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 @media (max-width: 479px) {
+
+    /*----------------------INSTITUCIONAL----------------------*/
+    html body .feicotur-head h2
+    {
+        font-size: 18px;
+    }
+    /*----------------------INSTITUCIONAL----------------------*/
+
+
+
+
+    /*----------------------CONTATO----------------------*/
+    body .contato form legend
+    {
+        height: auto;
+        font-size: 14px;
+    }
+
+    .contato form p
+    {
+        display: none;
+    }
+
+    body .contato form #dados #campo-nome #w-input,
+    body .contato form #dados #campo-email #w-input,
+    body .contato form #dados #campo-telefone #w-input,
+    body .contato form #dados #campo-mensagem #w-input
+    {
+        padding-left: 0;
+    }
+
+    body .contato form #dados #campo-nome label,
+    body .contato form #dados #campo-email label,
+    body .contato form #dados #campo-telefone label,
+    body .contato form #dados #campo-mensagem label
+    {
+        margin-left: 0;
+        left: 0;
+        height: auto;
+        line-height: normal;
+        margin-top: 16px;
+    }
+
+    body .contato form #dados input
+    {
+        height: 45px;
+    }
+
+    .contato form #dados .linha
+    {
+        position: relative;
+    }
+
+    body .contato form #dados #w-input.required:before
+    {
+        left: auto;
+        right: 100%;
+        top: 0;
+        margin-right: 6px;
+        margin-top: 15px;
+    }
+    /*----------------------CONTATO----------------------*/
+
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -494,6 +562,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @media (max-width: 767px) {
 
+    /*----------------------FOOTER----------------------*/
     body footer
     {
         padding-bottom: 40px;
@@ -511,13 +580,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
     {
         margin-top: 30px;
     }
+    /*----------------------FOOTER----------------------*/
+
+    
+
+
+    /*----------------------INSTITUCIONAL----------------------*/
+    body .institucional ul li #txt
+    {
+        padding-right: 15px;
+    }
+
+    body .institucional ul li h3,
+    body .institucional ul li p
+    {
+        text-align: center; 
+    }
+
+    body .institucional ul i
+    {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    body .institucional ul i img
+    {
+        width: 140px;
+    }
+    /*----------------------INSTITUCIONAL----------------------*/
 
 }
 
 @media (max-width: 840px) {
 
     /*----------------------CARROSSEL----------------------*/
-
     html body .carrossel .edicoes .atual .logo-atual 
     {
         width: 270px;
@@ -548,6 +644,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
         line-height: 1.5em
     }
     /*----------------------GERAL----------------------*/
+
+
 
 
     /*----------------------MENU----------------------*/
@@ -684,13 +782,38 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
     /*----------------------QUEM SOMOS----------------------*/
 
-    body .home .quem-somos #wrap-tit,
-    body .institucional #wrap-tit
+    body .home .quem-somos #wrap-tit
     {
         text-align: center;
     }
 
     /*----------------------QUEM SOMOS----------------------*/
+
+
+
+
+    /*----------------------INSTITUCIONAL----------------------*/
+    body .institucional .quem-somos #wrap-tit h1
+    {
+        font-size: 57px;
+    }
+
+    body .institucional .quem-somos #wrap-tit h1 span
+    {
+        font-size: 48px;
+    }
+
+    body .institucional ul li
+    {
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+    body .institucional ul li h3
+    {
+
+    }
+    /*----------------------INSTITUCIONAL----------------------*/
 
 
 
@@ -700,6 +823,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 @media (max-width: 1199px) {
+
+    /*----------------------GERAL----------------------*/
+    body .feicotur-head h2
+    {
+        font-size: 24px;
+    }
+    /*----------------------GERAL----------------------*/
+
+
+
 
     /*----------------------CARROSSEL----------------------*/
     body .carrossel .edicoes .atual .atracoes li p
@@ -731,6 +864,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     /*----------------------CARROSSEL----------------------*/
 
 
+
+
     /*----------------------QUEM SOMOS INSTITUCIONAL / HOME----------------------*/
     body .home .quem-somos #wrap-tit h1,
     body .institucional #wrap-tit h1
@@ -749,6 +884,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
         font-size: 20px;
     }
     /*----------------------QUEM SOMOS INSTITUCIONAL / HOME----------------------*/
+
+
+
+
+    /*----------------------INSTITUCIONAL----------------------*/
+    body .institucional #wrap-tit
+    {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    body .institucional .quem-somos
+    {
+        margin-top: -80px;
+    }
+    /*----------------------INSTITUCIONAL----------------------*/
 
 }
 
@@ -1243,7 +1394,8 @@ a, a:hover, a:active, a:focus
 
 .home .a-feira
 {
-    padding-top: 200px;
+    padding-top: 180px;
+    padding-bottom: 60px;
 }
 
 .home .a-feira p
@@ -1454,16 +1606,8 @@ footer .coordenacao p
     float: left;
 }
 
-.institucional ul li i
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .institucional ul li #txt
 {
-    margin-left: 170px;
     padding-right: 30px;
 }
 
@@ -1494,19 +1638,18 @@ footer .coordenacao p
 
 .a-feira .parcerias li
 {
-
     text-align: left;
     display: inline-block;
     margin-right: 32px;
     max-width: 20%;
     vertical-align: top;
+    text-indent: -9999px;
 }
 
 .a-feira .parcerias li i
 {
     max-width: 100%;
     display: block;
-    text-indent: -9999px;
     margin-bottom: 15px;
     height: 85px;
 }
@@ -1588,9 +1731,21 @@ footer .coordenacao p
     display: none;
 }
 
+.contato #fecha
+{
+    background: url(img/feicotur-button-close.png) no-repeat center;
+    padding: 10px;
+    width: 33px;
+    height: 33px;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 70px -15px 0 auto;
+}
+    
 .contato form
 {
-    margin-top: 120px;
+    margin-top: 30px;
     margin-bottom: 120px;
     background: white;
     padding: 0 30px;
@@ -1782,6 +1937,12 @@ footer .coordenacao p
     box-sizing: content-box;
 }
 
+.contato form input[type="submit"]:hover
+{
+    background-color: #0e4c8c;
+    color: white;
+}
+
 .contato form #notificacoes
 {
     position: absolute;
@@ -1845,3 +2006,156 @@ footer .coordenacao p
 
 
 /*-------------------CONTATO-------------------*/
+
+
+
+
+/*-------------------FOTOS-------------------*/
+.fotos ul
+{
+    margin-bottom: 120px;
+    margin-top: -50px;
+}
+
+.fotos ul li
+{
+    padding: 0px;
+    border: 1px solid white;
+}
+
+.fotos ul li:before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url(img/feicotur-bg-lupa-fotos.png) center;
+    pointer-events: none;
+    z-index: 10;
+
+    -webkit-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -moz-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -o-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -ms-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+}
+
+.fotos ul li:hover:before
+{
+    top: 75%;
+}
+
+.fotos ul li figure img
+{
+    width: 100%;
+}
+
+.fotos .foto-full
+{
+    position: fixed;
+    z-index: 90000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(img/grey-70.png);
+    text-align: center;
+    display: none;
+}
+
+.fotos .foto-full .row
+{
+    height: 100%;
+}
+
+.fotos .foto-full button
+{
+    outline: none;
+    border: none;
+}
+
+.fotos .foto-full #close
+{
+    position: absolute;
+    background: url(img/feicotur-button-close.png) no-repeat 98% 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+.fotos .foto-full #left,
+.fotos .foto-full #right
+{
+    position: absolute;
+    left: -15px;
+    top: 20%;
+    height: 60%;
+    width: 50%;
+    margin: 0;
+    display: block;
+    background-image: url(img/feicotur-button-left.png);
+    background-position: 10% center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline;
+    z-index: 1;
+}
+
+.fotos .foto-full #right
+{
+    left: auto;
+    right: -15px;
+    background-image: url(img/feicotur-button-right.png);
+    background-position: 90% center;
+}
+
+.fotos .foto-full #left:hover,
+.fotos .foto-full #right:hover
+{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.fotos .foto-full #left:hover
+{
+    background-position: 8% center;
+}
+
+.fotos .foto-full #right:hover
+{
+    background-position: 92% center;
+}
+
+.fotos .foto-full #helper
+{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fotos .foto-full .wrap-img
+{
+    height: 100%;
+    text-align: center;
+}
+
+.fotos .foto-full .wrap-img img
+{
+    position: relative;
+    z-index: 2;
+}
+
+.fotos .foto-full img
+{
+    max-width: 80%;
+    max-height: 80%;
+    vertical-align: middle;
+}
+
+/*-------------------FOTOS-------------------*/
+
