@@ -149,9 +149,11 @@
                     </li><li class="submenu">
                         <a class="ani-04">Fotos</a>
                         <ul class="ani-02">
-                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2017">2017</a></li>
-                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2016">2016</a></li>
-                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2015">2015</a></li>
+
+                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2017">2017</a></li>
+                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2016">2016</a></li>
+                            <li><a class="ani-02" href="<?php bloginfo('url') ?>/fotos/2015">2015</a></li>
+
                         </ul>
                     </li><li>
                         <a class="ani-04" href="#">Contato</a></li>
