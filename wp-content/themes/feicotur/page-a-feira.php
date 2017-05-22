@@ -90,6 +90,7 @@
 								<h3>Incentivar o Turismo</h3>
 								<p>Incentivar o turismo urbano e rural como fator de desenvolvimento sócio-econômico e de afirmação dos valores culturais e histórico-locais</p>
 							</li>
+							<div class="clearfix"></div>
 							<li class="col-md-4">
 								<h3>Integrar Empresários</h3>
 								<p>Incentivar a integração e participação de empresários na Feira da Industria, Comércio e Turismo, estimulando o planejamento de ações para melhor inserção nos diversos setores da economia do Distrito Federal</p>
@@ -102,6 +103,7 @@
 								<h3>Promover a Aprocimação</h3>
 								<p>Promover a aproximação entre produtores de bens e serviços e consumidores</p>
 							</li>
+							<div class="clearfix"></div>
 							<li class="col-md-4">
 								<h3>Incentivar e Difundir a Arte</h3>
 								<p>Incentivar e difundir as formas de produção artístico-literária locais por meio de apresentações de grupos musicais</p>

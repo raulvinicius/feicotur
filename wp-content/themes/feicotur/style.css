@@ -1489,13 +1489,16 @@ footer .coordenacao p
 .a-feira .parcerias ul
 {
     margin-top: 40px;
+    text-align: center;
 }
 
 .a-feira .parcerias li
 {
+    text-align: left;
     display: inline-block;
     margin-right: 32px;
     max-width: 20%;
+    vertical-align: top;
 }
 
 .a-feira .parcerias li i
@@ -1503,47 +1506,47 @@ footer .coordenacao p
     max-width: 100%;
     display: block;
     text-indent: -9999px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    height: 85px;
 }
 
 .a-feira .parcerias #governo i
 {
-    background: url(img/feicotur-logo-governo-brasilia.png) no-repeat;
+    background: url(img/feicotur-logo-governo-brasilia.png) no-repeat center left;
     width: 248px;
-    height: 66px;
 }
 
 .a-feira .parcerias #adm i
 {
-    background: url(img/feicotur-logo-adm-regional-sobradinho.png) no-repeat;
+    background: url(img/feicotur-logo-adm-regional-sobradinho.png) no-repeat center left;
     width: 181px;
-    height: 26px;
 }
 
 .a-feira .parcerias #facidf i
 {
-    background: url(img/feicotur-logo-facidf-color.png) no-repeat;
+    background: url(img/feicotur-logo-facidf-color.png) no-repeat center left;
     width: 193px;
-    height: 50px;
 }
 
 .a-feira .parcerias #cacb i
 {
-    background: url(img/feicotur-logo-cacb-color.png) no-repeat;
+    background: url(img/feicotur-logo-cacb-color.png) no-repeat center left;
     width: 170px;
-    height: 34px;
 }
 
 .a-feira .parcerias #acis i
 {
-    background: url(img/feicotur-logo-acis-color.png) no-repeat;
+    background: url(img/feicotur-logo-acis-color.png) no-repeat center left;
     width: 85px;
-    height: 85px;
 }
 
 .a-feira .objetivos
 {
+    position: relative;
+    z-index: 0;
     background: url(img/feicotur-bg-objetivos.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     padding-top: 70px;
     padding-bottom: 100px;
 }
@@ -1558,9 +1561,9 @@ footer .coordenacao p
     margin-bottom: 55px;
 }
 
-.a-feira .objetivos li:nth-child(3n)
+.a-feira .objetivos li
 {
-    background: red;
+    margin-bottom: 40px;
 }
 
 /*----------------------A FEIRA----------------------*/
