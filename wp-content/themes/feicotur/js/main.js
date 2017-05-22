@@ -51,7 +51,7 @@ $(document).ready(function() {
 		$('footer .recorte').removeAttr('viewBox');
 		$('footer .recorte')[0].setAttribute('viewBox', '0 0 ' + wBody + ' 31');
 
-		$('.carrossel').css('height', $('body').innerHeight() + 'px')
+		$('.carrossel').css('height', $(window).innerHeight() + 'px')
 
 	});
 	$( window ).trigger('resize');
