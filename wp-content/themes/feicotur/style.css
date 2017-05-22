@@ -1560,9 +1560,9 @@ footer .coordenacao p
     margin-bottom: 55px;
 }
 
-.a-feira .objetivos li:after
+.a-feira .objetivos li:nth-child(3n)
 {
-
+    background: red;
 }
 
 /*----------------------A FEIRA----------------------*/
