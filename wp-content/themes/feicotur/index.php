@@ -10,7 +10,7 @@
 			<li class="li-edicao atual container-fluid">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-offset-2 col-sm-8">
+						<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
 							
 							<h2 class="regular">Você é nosso convidado para</h2>
 
@@ -72,12 +72,12 @@
 
 			<div class="container-fluid bts-edicoes">
 				<div class="row">
-					<button class="bt-edicao ativo"><span>2017</span></button>
-					<button class="bt-edicao"><span>2016</span></button>
-					<button class="bt-edicao"><span>2015</span></button>
-					<button class="bt-edicao"><span>2014</span></button>
-					<button class="bt-edicao"><span>2013</span></button>
-					<button class="bt-edicao"><span>2012</span></button>
+					<button class="bt-edicao ativo"><span class="ani-04">2017</span></button>
+					<button class="bt-edicao"><span class="ani-04">2016</span></button>
+					<button class="bt-edicao"><span class="ani-04">2015</span></button>
+					<button class="bt-edicao"><span class="ani-04">2014</span></button>
+					<button class="bt-edicao"><span class="ani-04">2013</span></button>
+					<button class="bt-edicao"><span class="ani-04">2012</span></button>
 				</div>
 			</div>
 
@@ -86,7 +86,7 @@
 
 	<section id="inicio" class="a-feira feicotur-head container-fluid">
 
-		<div class="container">
+		<div id="content" class="container">
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
 					<p>A FEICOTUR tem o propósito de reunir expositores da Industria, Comércio e Turismo a nível local e Regional durante três dias com a finalidade de aproximar empresários, consumidores e a população em geral</p>
@@ -122,11 +122,11 @@
 
 		<div class="row">
 		
-			<div id="wrap-tit" class="col-sm-3">
+			<div id="wrap-tit" class="col-md-3 col-sm-12">
 				<h1 class="black color-y">Quem <span class="bold color-b">Somos</span></h1>
 			</div>
-			<div class="col-sm-9">
-				<div class="col-sm-11 col-sm-offset-1">
+			<div class="col-md-9 col-sm-12">
+				<div class="col-lg-11 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12">
 					<ul>
 						<li class="col-sm-4">
 							<i><img src="<?php bloginfo('template_url') ?>/img/feicotur-icon-inovacao.svg" width="147"></i>
