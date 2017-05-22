@@ -72,10 +72,12 @@
         <link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('template_url') ?>/favicon/apple-icon-144x144.png">
         <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url') ?>/favicon/apple-icon-152x152.png">
         <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url') ?>/favicon/apple-icon-180x180.png">
+        <!-- 
         <link rel="icon" type="image/png" sizes="192x192"  href="<?php bloginfo('template_url') ?>/favicon/android-icon-192x192.png">
         <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url') ?>/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_url') ?>/favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url') ?>/favicon/favicon-16x16.png">
+         -->
         <link rel="manifest" href="<?php bloginfo('template_url') ?>/favicon/manifest.json">
         <meta name="msapplication-TileColor" content="#f7931e">
         <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
@@ -123,6 +125,7 @@
     </head>
 
     <body>
+        <span class="msk-site ani-06"></span>
         <?php wp_path_to_js(); ?>
 
         <!--[if lt IE 8]>
@@ -137,15 +140,23 @@
         <![endif]-->
 
         <header>
-            <nav class="menu">
+            <nav class="menu fechado">
                 <a href="<?php bloginfo('url') ?>"><h1 class="logo">FEICOTUR</h1></a>
-                <ul>
-                    <li><a href="#">A Feira</a></li>
-                    <li><a href="#">Institucional</a></li>
-                    <li><a href="#">Fotos</a></li>
-                    <li><a href="#">Vídeos</a></li>
-                    <li><a href="#">Contato</a></li>
+                <ul id="main-links" class="ani-04">
+                    <li><a class="ani-04" href="#">A Feira</a>
+                    </li><li>
+                        <a class="ani-04" href="#">Institucional</a>
+                    </li><li class="submenu">
+                        <a class="ani-04">Fotos</a>
+                        <ul class="ani-02">
+                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2017">2017</a></li>
+                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2016">2016</a></li>
+                            <li><a class="ani-02" href="<?php bloginfo('template_url') ?>/fotos/2015">2015</a></li>
+                        </ul>
+                    </li><li>
+                        <a class="ani-04" href="#">Contato</a></li>
                 </ul>
+                <span class="bt-toggle"></span>
             </nav>
         </header>
 

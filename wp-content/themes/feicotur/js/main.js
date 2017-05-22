@@ -1,14 +1,35 @@
 $(document).ready(function() {
 
-
 	$( window ).scroll(function(e) 
 	{ 
 		setTimeout(showInAnimation,400);
 
-		scrollHome();
+		// Define a direção do scroll
+		if( scrollAntigo != 'undefined' && scrollAntigo < $(window).scrollTop() )
+		{
+			direcaoScroll = 'descendo';
+		}
+		else
+		{
+			direcaoScroll = 'subindo';
+		}
 
-		lastScroll = $(window).scrollTop();
+		// deside quando e para onde o site vai
+		if( $('.home').length > 0 && scrollAntigo != 'undefined' )
+		{
+			if( $(window).scrollTop() < $(window).innerHeight() && direcaoScroll == 'descendo' )
+			{
+				console.log('to home (' + direcaoScroll + ' / ' + canScroll + ')')
+				scrollHome();
+			}
+			else if( $(window).scrollTop() < $(window).innerHeight() && direcaoScroll == 'subindo' )
+			{
+				console.log('to carrossel (' + direcaoScroll + ' / ' + canScroll + ')')
+				scrollCarrossel();
+			}
 
+		} 
+		scrollAntigo = $(window).scrollTop();
 
 	});
 	setTimeout(showInAnimation,400);
@@ -17,6 +38,7 @@ $(document).ready(function() {
 
 	$( window ).resize(function(e) 
 	{
+		$('.menu').removeClass('aberto').addClass('fechado');
 		//redesenha o recorte do rodapé
 		wBody = $('body').width();
 		wRecorte = 504;
@@ -26,9 +48,42 @@ $(document).ready(function() {
 			wNovo = 0;
 		}
 		$('footer .recorte path').attr('d', 'M1920,0v41H0V31h'+ wNovo +'l31-31H'+ wNovo +'z');
+		$('footer .recorte').removeAttr('viewBox');
+		$('footer .recorte')[0].setAttribute('viewBox', '0 0 ' + wBody + ' 31');
+
+		$('.carrossel').css('height', $('body').innerHeight() + 'px')
+
 	});
 	$( window ).trigger('resize');
 
+
+
+
+	//-----------------MOSTRA SITE-----------------//
+
+	setTimeout(function()
+	{
+		$('.msk-site')
+			.css({
+				opacity: '0'
+			})
+	}, 200)
+
+	//-----------------MOSTRA SITE-----------------//
+
+
+	//-----------------BT FECHA/ABRE MENU-----------------//
+
+	$('body').on('click', '.menu .bt-toggle', function(event) {
+		event.preventDefault();
+
+		$(this).closest('nav')
+			.toggleClass('aberto')
+			.toggleClass('fechado');
+	});
+
+	//-----------------BT FECHA/ABRE MENU-----------------//
+	
 
 
 
@@ -141,6 +196,9 @@ $(document).ready(function() {
 }); //end $(document).ready
 
 
+var canScroll = true;
+var scrollAntigo;
+var direcaoScroll = '';
 var wasScrolled = false;
 var wBody = 0;
 var wRecorte = 0;
@@ -237,15 +295,37 @@ function showInAnimation ()
 	})
 }
 
+function scrollCarrossel ()
+{
+	if( canScroll )
+	{
+		canScroll = false;
+		$('html, body').animate({
+			scrollTop:0
+		}, 500, endScroll)
+	}
+}
+
 function scrollHome ()
 {
-	if( !wasScrolled && $(window).scrollTop() < 30 )
+	if( canScroll )
 	{
+		canScroll = false;
 		$('html, body').animate({
-			scrollTop:document.getElementById('inicio').getBoundingClientRect().top+5
-		}, 500)
+			scrollTop:document.getElementById('inicio').getBoundingClientRect().top+10
+		}, 500, endScroll)
 	}
-	wasScrolled = true;
+}
+
+function endScroll()
+{
+	setTimeout(function()
+	{
+		canScroll = true;
+		console.log('end: ' + direcaoScroll)
+		console.log('end: ' + $(window).scrollTop())
+		console.log('end: ' + $(window).innerHeight())
+	}, 100);
 }
 
 function finalScrollHome()

@@ -97,6 +97,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*----------------------CLASSES----------------------*/
 
+.msk-site
+{
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    opacity: 1;
+    pointer-events: none;
+}
+
 .ani-02,
 .hided,
 .appeared
@@ -227,6 +240,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .lk
 {
+    outline: none;
     color: white;
     font-size: 16px;
     font-family: 'lato-bold', Arial, sans-serif;
@@ -236,16 +250,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border: 1px solid white;
     display: inline-block;
     position: relative;
+    -webkit-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -moz-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -o-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    -ms-transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
+    transition: 0.4s all cubic-bezier(0.34, 0, 0, 1);
 }
 
-.lk:hover, .lk:focus
+.lk:hover,
+.lk:focus,
+.lk:active
+{
+    padding: 8px 13px 8px 18px;
+    background: white;
+    color: #0e4c8c;
+}
+
+.lk.b:hover, .lk.b:focus, .lk.b:active
 {
     color: white;
-}
-
-.lk.b:hover, .lk.b:focus
-{
-    color: #0e4c8c;
+    background: #0e4c8c;
 }
 
 .lk.b
@@ -293,7 +317,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 {
     background: url(img/feicotur-bg-head-left.png) no-repeat left top;
     /*width: 530px;*/
-    height: 672px;
+    height: 739px;
     content: '';
     display: block;
     position: absolute;
@@ -315,6 +339,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
     top: 0;
     bottom: 0;
     right: 0;
+}
+
+.feicotur-head #content
+{
+    position: relative;
+    z-index: 6;
 }
 
 .feicotur-head #pattern
@@ -377,19 +407,369 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*----------------------MEDIAS----------------------*/
 
+@media (max-height: 690px) {
+
+    /*----------------------CARROSSEL----------------------*/
+    .carrossel .edicoes .atual .atracoes
+    {
+        display: none;
+    }
+
+    body .carrossel .edicoes .atual .logo-atual
+    {
+        margin-bottom: 35px;
+    }
+
+    html body .carrossel .edicoes .atual p
+    {
+        font-size: 21px !important;
+        line-height: 26px !important;
+    }
+
+    html body .carrossel .edicoes .atual p span.linha-2
+    {
+        margin-top: 8px;
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    html body .carrossel .edicoes .atual p span.linha-3
+    {
+        margin-top: 8px;
+        font-size: 21px !important;
+        line-height: 24px !important;
+    }
+
+    body .carrossel .edicoes .atual p img
+    {
+        width: 30px;
+    }
+
+    .carrossel .edicoes .bts-edicoes .row
+    {
+        text-align: center;
+    }
+
+    body .carrossel .edicoes .bt-edicao
+    {
+        text-indent: -9999px;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 5px;
+        float: none;
+        background: #C2D0E8;
+    }
+
+    body .carrossel .edicoes .bt-edicao:hover span,
+    body .carrossel .edicoes .bt-edicao:focus span,
+    body .carrossel .edicoes .bt-edicao:active span
+    {
+        margin-top: 0;
+        padding-bottom: 5px;
+    }
+
+    body .carrossel .edicoes .bt-edicao.ativo
+    {
+        background: white;
+    }
+    /*----------------------CARROSSEL----------------------*/
+    
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 479px) {
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
 }
 
+@media (max-width: 767px) {
+
+    body footer
+    {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    body footer ul li
+    {
+        margin-bottom: 20px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    body footer .realizacao h2
+    {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 840px) {
+
+    /*----------------------CARROSSEL----------------------*/
+
+    html body .carrossel .edicoes .atual .logo-atual 
+    {
+        width: 270px;
+    }
+
+    html body .carrossel .edicoes .atual h2
+    {
+        font-size: 12.17px !important;
+        line-height: 15px;
+        margin-bottom: 10px;
+    }
+
+    /*----------------------CARROSSEL----------------------*/
+    
+}
+
+@media (max-width: 991px) {
+
+    /*----------------------GERAL----------------------*/
+    body h3
+    {
+        font-size: 20px;
+    }
+
+    body p
+    {
+        font-size: 12px;
+        line-height: 1.5em
+    }
+    /*----------------------GERAL----------------------*/
+
+
+    /*----------------------MENU----------------------*/
+    body .menu.aberto
+    {
+        z-index: 1100;
+    }
+
+    body .menu .bt-toggle
+    {
+        content: '';
+        display: block;
+        width: 32px;
+        background: url(img/feicotur-bg-icon-menu-sandwich.gif) repeat-x center right;
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        right: 16px;
+        cursor: pointer;
+    }
+
+    body .menu.aberto .bt-toggle
+    {
+        background: url(img/feicotur-bg-icon-fecha-menu.png) no-repeat center;
+    }
+
+    body .menu #main-links
+    {
+        text-align: center;
+        background: white;
+        position: fixed;
+        top: 100px;
+        bottom: 100%;
+        overflow: auto;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    body .menu.aberto #main-links
+    {
+        bottom: 0;
+    }
+
+    body .menu #main-links > li,
+    body .menu #main-links > li > a
+    {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    body .menu #main-links > li.submenu
+    {
+        height: auto;
+        position: static;
+    }
+
+    body .menu li.submenu ul
+    {
+        margin-top: -15px;
+        margin-bottom: 10px;
+        position: static;
+        opacity: 1;
+    }
+
+    body .menu #main-links li.submenu ul a
+    {
+        margin: 0;
+        color: #999;
+        background: white;
+        line-height: 50px;
+        padding: 0;
+        height: 50px;
+    }
+    /*----------------------MENU----------------------*/
+
+
+
+
+    /*----------------------CARROSSEL----------------------*/
+    html body .carrossel .edicoes .atual h2
+    {
+        font-size: 21.17px;
+    }
+
+    html body .carrossel .edicoes .atual p {
+        font-size: 27px;
+        line-height: 36px;
+    }
+
+    html body .carrossel .edicoes .atual p span.linha-2
+    {
+        font-size: 20.67px;
+    }
+
+    html body .carrossel .edicoes .atual p span.linha-3 
+    {
+        font-size: 32.74px;
+    }
+
+    body .carrossel .edicoes .atual .logo-atual 
+    {
+        width: 595px;
+    }
+
+    body .carrossel .edicoes .bt-edicao span
+    {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    body .carrossel .edicoes li button.bt-right,
+    body .carrossel .edicoes li button.bt-left
+    {
+        width: 70px;
+        height: 70px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    body .carrossel .edicoes li button.bt-left
+    {
+        left: -90px;
+    }
+
+    body .carrossel .edicoes li button.bt-right
+    {
+        right: -90px;
+    }
+    /*----------------------CARROSSEL----------------------*/
+
+
+
+
+    /*----------------------QUEM SOMOS----------------------*/
+
+    body .home .quem-somos #wrap-tit,
+    body .institucional #wrap-tit
+    {
+        text-align: center;
+    }
+
+    /*----------------------QUEM SOMOS----------------------*/
+
+
+
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 1199px) {
+
+    /*----------------------CARROSSEL----------------------*/
+    body .carrossel .edicoes .atual .atracoes li p
+    {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    body .carrossel .edicoes .atual p
+    {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    body .carrossel .edicoes .atual p span.linha-2
+    {
+        font-size: 22.67px
+    }
+
+    body .carrossel .edicoes .atual p span.linha-3
+    {
+        font-size: 35.74px;
+    }
+
+    body .carrossel .edicoes .atual h2
+    {
+        font-size: 21.87px;
+    }
+    /*----------------------CARROSSEL----------------------*/
+
+
+    /*----------------------QUEM SOMOS INSTITUCIONAL / HOME----------------------*/
+    body .home .quem-somos #wrap-tit h1,
+    body .institucional #wrap-tit h1
+    {
+        font-size: 71px;
+    }
+
+    body .home .quem-somos #wrap-tit h1 span,
+    body .institucional #wrap-tit h1 span
+    {
+        font-size: 60px;
+    }
+
+    body .quem-somos ul li h3
+    {
+        font-size: 20px;
+    }
+    /*----------------------QUEM SOMOS INSTITUCIONAL / HOME----------------------*/
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
 }
 
 @media (min-width: 1200px) {
+}
+
+@media (max-width: 1540px) {
+
+    body .menu
+    {
+        text-align: left;
+    }
+
+    body .menu > a
+    {
+        margin-left: 16px;
+    }
+
 }
 
 /*----------------------MEDIAS----------------------*/
@@ -501,7 +881,6 @@ a, a:hover, a:active, a:focus
 .menu
 {
     width: 100%;
-    height: 100px;
     background-color: white;
     background: url(img/feicotur-bg-logo.jpg) center no-repeat white;
     text-align: center;
@@ -509,19 +888,20 @@ a, a:hover, a:active, a:focus
     z-index: 1000;
     top: 0;
     height: 100px;
+    border-bottom: 1px solid #D5E1EF;
 }
 
 .menu .logo
 {
     width: 180px;
-    height: 60px;
+    height: 100px;
     text-indent: -9999px;
     background: url(img/feicotur-logo.png) center no-repeat;
     display: inline-block;
-    margin: 17px 0 0 0;
+    margin: 0;
 }
 
-.menu ul
+.menu #main-links
 {
     width: 100%;
     text-align: right;
@@ -529,20 +909,82 @@ a, a:hover, a:active, a:focus
     font-family: 'lato-medium', Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    margin-top: -40px;
+    margin-top: -100px;
     padding-right: 35px;
 }
 
-.menu ul li
+.menu #main-links>li
 {
     display: inline-block;
-    padding: 0 2.5px;
+    padding: 0px;
+    height: 100px;
 }
 
-.menu ul li a
+.menu #main-links>li>a
 {
+    background: url(img/feicotur-bg-lk-white.png) no-repeat center;
     color: #666666;
-    padding: 10px 7.5px;
+    padding: 0 13px;
+    line-height: 100px;
+    height: 100px;
+    display: block;
+}
+
+.menu #main-links>li>a:hover,
+.menu #main-links>li>a:focus,
+.menu #main-links>li.submenu:hover>a
+{
+    color: white;
+    background: url(img/feicotur-bg-lk-white.png) no-repeat center;
+    background-color: #3379A8;
+}
+
+.menu li.submenu
+{
+    position: relative;
+}
+
+.menu li.submenu ul
+{
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    top: 100%;
+    opacity: 0;
+}
+
+.menu li.submenu:hover ul
+{
+    opacity: 1;
+}
+
+.menu li.submenu ul li
+{
+    width: 100%;
+}
+
+.menu #main-links li.submenu ul a
+{
+    background: #3379A8;
+    display: block;
+    padding: 10px 10px;
+    width: 100%;
+    color: white;
+    margin-top: -30px;
+}
+
+.menu #main-links li.submenu:hover ul a
+{
+    margin-top: 0;
+}
+
+.menu #main-links li.submenu ul a:hover,
+.menu #main-links li.submenu ul a:focus
+{
+    background: #023468;
 }
 
 /*----------------------HEADER----------------------*/
@@ -564,10 +1006,10 @@ a, a:hover, a:active, a:focus
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    height: 100%;
     z-index: 1001;
     background: #1154af;
     margin-top: -100px;
+    overflow: hidden;
 }
 
 .carrossel ul
@@ -614,6 +1056,7 @@ a, a:hover, a:active, a:focus
 
 .carrossel .edicoes .atual .logo-atual
 {
+    width: 100%;
     margin-bottom: 70px;
 }
 
@@ -761,6 +1204,14 @@ a, a:hover, a:active, a:focus
     float: left;
 }
 
+.carrossel .edicoes .bt-edicao:hover span,
+.carrossel .edicoes .bt-edicao:focus span,
+.carrossel .edicoes .bt-edicao:active span
+{
+    padding-bottom: 10px;
+    margin-top: -5px;
+}
+
 .carrossel .edicoes .bt-edicao.ativo
 {
     background-color: #002143;
@@ -769,6 +1220,7 @@ a, a:hover, a:active, a:focus
 
 .carrossel .edicoes .bt-edicao span
 {
+    margin-top: 0;
     width: 100%;
     font-size: 55px;
     font-family: 'lato-thin', Arial, sans-serif;
@@ -790,11 +1242,6 @@ a, a:hover, a:active, a:focus
 
 /*----------------------HOME----------------------*/
 
-.home
-{
-    height: 100%;
-}
-
 .home .a-feira
 {
     padding-top: 200px;
@@ -814,7 +1261,9 @@ a, a:hover, a:active, a:focus
 
 .home .quem-somos ul li
 {
-    margin-bottom: 150px;
+    margin-bottom: 70px;
+    padding-right: 24px;
+    padding-left: 24px;
     position: relative;
     text-align: center;
 }
@@ -877,12 +1326,10 @@ footer .recorte
 
 footer h2
 {
-    font-size: 16.52px;
+    font-size: 10px;
     color: white;
     font-family: 'lato-regular', Arial, sans-serif;
-    text-transform: none;
-    letter-spacing: 0.1em;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
 }
 
 footer p
@@ -900,10 +1347,32 @@ footer .parceiros li
     list-style: none;
     display: inline-block;
     margin-right: 38px;
+    vertical-align: middle;
 }
 
 
 footer .parceiros .parceiro-01
+{
+    background: url(img/feicotur-logo-revista-influencia.png) no-repeat center;
+    width: 120px;
+    height: 23px;
+}
+
+footer .parceiros .parceiro-02
+{
+    background: url(img/feicotur-logo-facidf.png) no-repeat center;
+    width: 120px;
+    height: 31px;
+}
+
+footer .parceiros .parceiro-03
+{
+    background: url(img/feicotur-logo-acis.png) no-repeat center;
+    width: 60px;
+    height: 60px;
+}
+
+footer .parceiros .parceiro-04
 {
     background: url(img/feicotur-logo-humano-studio.png) no-repeat center;
     width: 129px;
@@ -917,21 +1386,16 @@ footer .coordenacao
     display: inline-block;
 }
 
-footer .realizacao
-{
-    margin-right: 65px;
-}
-
 footer .realizacao p
 {
-    background: url(img/feicotur-logo-branca.png) no-repeat center;
-    width: 124px;
-    height: 32px;
+    background: url(img/feicotur-logo-merito-comunicacao.png) no-repeat center;
+    width: 105px;
+    height: 60px;
 }
 
 footer .coordenacao p
 {
-    background: url(img/feicotur-logo-merito-comunicacao.png) no-repeat center;
+    background: url(img/feicotur-logo-branca.png) no-repeat center;
     width: 105px;
     height: 36px;
 }
@@ -965,6 +1429,7 @@ footer .coordenacao p
     display: block;
     font-size: 91px;
     margin-top: 0;
+    margin-bottom: 40px;
 }
 
 .home .quem-somos #wrap-tit h1 span,
@@ -1004,6 +1469,104 @@ footer .coordenacao p
 }
 
 /*----------------------INSTITUCIONAL----------------------*/
+
+
+
+
+
+/*----------------------A FEIRA----------------------*/
+
+.a-feira .tit-section h2
+{
+    letter-spacing: 0.24em;
+    font-size: 44px;
+    margin-top: 0px;
+}
+
+.a-feira .parcerias
+{
+    padding-bottom: 100px;
+}
+
+.a-feira .parcerias ul
+{
+    margin-top: 40px;
+}
+
+.a-feira .parcerias li
+{
+    display: inline-block;
+    margin-right: 32px;
+    max-width: 20%;
+}
+
+.a-feira .parcerias li i
+{
+    max-width: 100%;
+    display: block;
+    text-indent: -9999px;
+    margin-bottom: 35px;
+}
+
+.a-feira .parcerias #governo i
+{
+    background: url(img/feicotur-logo-governo-brasilia.png) no-repeat;
+    width: 248px;
+    height: 66px;
+}
+
+.a-feira .parcerias #adm i
+{
+    background: url(img/feicotur-logo-adm-regional-sobradinho.png) no-repeat;
+    width: 181px;
+    height: 26px;
+}
+
+.a-feira .parcerias #facidf i
+{
+    background: url(img/feicotur-logo-facidf-color.png) no-repeat;
+    width: 193px;
+    height: 50px;
+}
+
+.a-feira .parcerias #cacb i
+{
+    background: url(img/feicotur-logo-cacb-color.png) no-repeat;
+    width: 170px;
+    height: 34px;
+}
+
+.a-feira .parcerias #acis i
+{
+    background: url(img/feicotur-logo-acis-color.png) no-repeat;
+    width: 85px;
+    height: 85px;
+}
+
+.a-feira .objetivos
+{
+    background: url(img/feicotur-bg-objetivos.jpg) no-repeat;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.a-feira .objetivos p
+{
+    color: #c4c4c4;
+}
+
+.a-feira .objetivos .tit-section
+{
+    margin-bottom: 55px;
+}
+
+.a-feira .objetivos li:after
+{
+
+}
+
+/*----------------------A FEIRA----------------------*/
+
 
 
 

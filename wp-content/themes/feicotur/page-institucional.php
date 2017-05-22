@@ -11,10 +11,10 @@
 		<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
 		<svg class="recorte" version="1.1"
 			 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-			 x="0px" y="0px" width="100%" height="190" viewBox="0 0 100% 100%" style="enable-background:new 0 0 1921 100%;"
+			 x="0px" y="0px" width="100%" height="190" style="enable-background:new 0 0 1921 100%;"
 			 xml:space="preserve">
 			 <defs>
-			   <pattern id='image-head' width="1" height="1" viewBox="0 0 100% 100%" preserveAspectRatio="none">
+			   <pattern id='image-head' width="1" height="1" preserveAspectRatio="none">
 			     <image xlink:href='<?php bloginfo('template_url') ?>/img/feicotur-bg-head-bot.jpg' x="0" y="0" width="100%" height="531" preserveAspectRatio="xMidYMin slice"></image>
 			   </pattern>
 			 </defs>
