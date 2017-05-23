@@ -555,6 +555,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
     /*----------------------CONTATO----------------------*/
 
+
+
+
+    /*----------------------A FEIRA----------------------*/
+    .a-feira .objetivos li h3
+    {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    html body .a-feira .tit-section h2
+    {
+        font-size: 30px;
+    }
+    /*----------------------A FEIRA----------------------*/
+
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -608,6 +624,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
         width: 140px;
     }
     /*----------------------INSTITUCIONAL----------------------*/
+
+
+
+
+    /*----------------------A FEIRA----------------------*/
+    body .a-feira .tit-section h2
+    {
+        font-size: 34px;
+    }
+
+    body .a-feira .parcerias li i
+    {
+        height: 65px;
+    }
+    /*----------------------A FEIRA----------------------*/
 
 }
 
@@ -900,6 +931,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
         margin-top: -80px;
     }
     /*----------------------INSTITUCIONAL----------------------*/
+
+
+
+
+    /*----------------------A FEIRA----------------------*/
+
+    /*----------------------A FEIRA----------------------*/
 
 }
 
@@ -1633,7 +1671,6 @@ footer .coordenacao p
 .a-feira .parcerias ul
 {
     margin-top: 40px;
-    text-align: center;
 }
 
 .a-feira .parcerias li
@@ -1641,47 +1678,56 @@ footer .coordenacao p
     text-align: left;
     display: inline-block;
     margin-right: 32px;
-    max-width: 20%;
     vertical-align: top;
     text-indent: -9999px;
 }
 
 .a-feira .parcerias li i
 {
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
     max-width: 100%;
     display: block;
     margin-bottom: 15px;
     height: 85px;
 }
 
+.a-feira .parcerias li p
+{
+    display: none;
+}
+
 .a-feira .parcerias #governo i
 {
-    background: url(img/feicotur-logo-governo-brasilia.png) no-repeat center left;
+    background-image: url(img/feicotur-logo-governo-brasilia.png);
     width: 248px;
 }
 
 .a-feira .parcerias #adm i
 {
-    background: url(img/feicotur-logo-adm-regional-sobradinho.png) no-repeat center left;
+    background-image: url(img/feicotur-logo-adm-regional-sobradinho.png);
     width: 181px;
 }
 
 .a-feira .parcerias #facidf i
 {
-    background: url(img/feicotur-logo-facidf-color.png) no-repeat center left;
+    background-image: url(img/feicotur-logo-facidf-color.png);
     width: 193px;
 }
 
 .a-feira .parcerias #cacb i
 {
-    background: url(img/feicotur-logo-cacb-color.png) no-repeat center left;
+    background-image: url(img/feicotur-logo-cacb-color.png);
     width: 170px;
 }
 
 .a-feira .parcerias #acis i
 {
-    background: url(img/feicotur-logo-acis-color.png) no-repeat center left;
+    background-image: url(img/feicotur-logo-acis-color.png);
     width: 85px;
+    max-width: 90%
 }
 
 .a-feira .objetivos
